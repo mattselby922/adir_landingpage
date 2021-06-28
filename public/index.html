@@ -24,12 +24,12 @@
         </div>
     </div>
 
-    <!-- -->
+    <!-- Sliding Info Panel -->
     <div class="w-full h-924 flex items-center bg-gradient-to-l from-black via-blue-900 to-black">
         <img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png">
         <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
         <div class="">
-            <img class="object-scale-down p-20 mx-auto"src="\src\Group 4.png">
+            <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
             <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
         </div>
         <img class="object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png">
@@ -38,21 +38,22 @@
     <!-- Clickable cards -->
     <div class="flex justify-center space-x-12 w-full mt-20 mb-20 mx-auto">
         <div>
-            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\Group 6 Copy.png"></a>
+            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\placeholderCard.png"></a>
         </div>
         <div>
-            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\Group 6 Copy.png"></a>
+            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\placeholderCard.png"></a>
         </div>
         <div>
-            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\Group 6 Copy.png"></a>
+            <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\placeholderCard.png"></a>
         </div>
-        <img class="absolute right-0 pt-20 z-0" src="\src\Group.png">
+        <img class="absolute right-0 pt-20 z-0" src="\src\treeBG.png">
     </div>
     
     <!-- 'Top News' Horizontal Bar -->
-    <div>
-        <a href="/news"><img src="\src\topNewsBar.png"></a>
-    </div>
+    <a  href="#"><div class="bg-green-700 w-8/12 h-24 rounded-r-full flex items-center gap-10 pr-10 justify-end">
+        <p class="text-4xl text-white">Top News & Information</p>
+        <img src="\src\arrow.png">
+    </div></a>
 
     <!-- Clickable cards 2 -->
     <div class="flex justify-center space-x-12 w-full mt-20 mb-20">
@@ -68,14 +69,19 @@
     </div>
     
     <!-- 'Find a Branch or ATM' Horizontal Bar -->
-     <div>
-        <img class="absolute right-0 z-10" src="\src\findABranch.png">
+    <div class="bg-green-700 w-8/12 h-24 rounded-l-full flex items-center gap-10 p-10 absolute right-0 z-10">
+        <p class="text-4xl text-white">Find a Branch or ATM</p>    
+        <form class="flex gap-10" action="/" method="POST">
+            <input class="p-2 z-20 text-center" type="number" id="zip" name="zip" maxlength="11" minlength="5" placeholder="Enter Zip" required="true">
+            <input type="image" name="submit" src="\src\arrow.png">
+        </form>
     </div>
 
     <!-- Map -->
     <div class="flex pt-12">
         <img class="w-full z-0" src="\src\map.png">
     </div>
+
     <!-- Footer -->
     <div class="w-full h-185 grid grid-cols-3 justify-items-center items-end py-10">
         <div class="w-max 2xl pl-10 m-8">
