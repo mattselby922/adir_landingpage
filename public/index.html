@@ -10,14 +10,14 @@
 </head>
 <body class="h-screen">
     <!-- Navbar -->
-    <div class="w-full h-185 grid grid-cols-3 items-baseline py-10">
-        <div class="w-max 2xl pl-20 m-8 text-xl">
+    <div class="w-full h-185 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-baseline py-10 justify-items-center">
+        <div class="w-max 2xl m-4 lg:m-8 text-xl">
             Visit <a class="text-green-600 transition ease-linear hover:text-green-900" href="https://www.adirondackbank.com">adirondackbank.com</a>   
         </div>
-        <div class="mx-auto">
+        <div>
             <img src="\src\adir_oneline_grn-white_banklocal.png">
         </div>
-        <div class="w-max 2xl pl-20 m-8 text-green-600 text-xl">
+        <div class="w-max m-8 text-green-600 text-xl">
             <a class="pr-3 transition ease-linear hover:text-green-900" href="/promotions">Promotions & Offers</a>
             <a class="pr-3 transition ease-linear hover:text-green-900" href="/news">Latest News</a>
             <a class="pr-3 transition ease-linear hover:text-green-900" href="/locations">Locations</a>
@@ -25,18 +25,32 @@
     </div>
 
     <!-- Sliding Info Panel -->
-    <div class="w-full h-924 flex items-center bg-gradient-to-l from-black via-blue-900 to-black">
-        <img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png">
-        <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
-        <div class="">
-            <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
-            <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
+    <div class="w-full h-924 relative">
+        <div class="slide absolute inset-0 flex items-center bg-gradient-to-l from-black via-blue-900 to-black transition-all ease-in-out duration-1000 transform translate-x-0">
+            <button onclick="previousSlide()"><img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
+            <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
+            <div class="">
+                <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
+                <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
+            </div>
+            <button onclick="nextSlide()"><img class="fixed right-0 object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png"></button>
         </div>
-        <img class="object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png">
-    </div>
+
+        <div class="slide inset-0 flex items-center bg-gradient-to-l from-black via-green-900 to-black transition-all ease-in-out duration-1000 transform translate-x-full">
+            <button onclick="previousSlide()"><img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
+            <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
+            <div>
+                <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
+                <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
+            </div>
+            <button onclick="nextSlide()"><img class="object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png"></button>
+        </div>
+     </div>
+
+    
 
     <!-- Clickable cards -->
-    <div class="flex justify-center space-x-12 w-full mt-20 mb-20 mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-20">
         <div>
             <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\placeholderCard.png"></a>
         </div>
@@ -51,12 +65,12 @@
     
     <!-- 'Top News' Horizontal Bar -->
     <a  href="#"><div class="bg-green-700 w-8/12 h-24 rounded-r-full flex items-center gap-10 pr-10 justify-end">
-        <p class="text-4xl text-white">Top News & Information</p>
+        <p class="text-3xl text-white pl-10 md:text-4xl md:pl-0">Top News & Information</p>
         <img src="\src\arrow.png">
     </div></a>
 
     <!-- Clickable cards 2 -->
-    <div class="flex justify-center space-x-12 w-full mt-20 mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-20">
         <div>
             <a href="/pppEZ"><img class="z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\pppEZ.png"></a>
         </div>
@@ -70,9 +84,9 @@
     
     <!-- 'Find a Branch or ATM' Horizontal Bar -->
     <div class="bg-green-700 w-8/12 h-24 rounded-l-full flex items-center gap-10 p-10 absolute right-0 z-10">
-        <p class="text-4xl text-white">Find a Branch or ATM</p>    
-        <form class="flex gap-10" action="/" method="POST">
-            <input class="p-2 z-20 text-center" type="number" id="zip" name="zip" maxlength="11" minlength="5" placeholder="Enter Zip" required="true">
+        <p class="text-sm text-center text-white md:text-3xl lg:text-4xl">Find a Branch or ATM</p>    
+        <form class="flex gap-10 " action="/" method="POST">
+            <input class="h-10 w-24 md:w-40  z-20 text-center" type="number" id="zip" name="zip" maxlength="11" minlength="5" placeholder="Enter Zip" required="true">
             <input type="image" name="submit" src="\src\arrow.png">
         </form>
     </div>
@@ -83,7 +97,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="w-full h-185 grid grid-cols-3 justify-items-center items-end py-10">
+    <div class="w-full h-185 grid grid-cols-1 lg:grid-cols-3 justify-items-center items-end py-10">
         <div class="w-max 2xl pl-10 m-8">
             <img src="\src\FDIC Group.png">
             <a class="pr-3" href="/privacyPolicy">Privacy Policy</a>
@@ -94,10 +108,10 @@
             <img class="p-5" src="\src\adir_logo_line.png">
             <div class="p-5">185 Genessee Street Utica, NY 13501</div>
         </div>
-        <div class="w-max 2xl pr-10 m-8">
-            <a class="pr-3" href="https://www.trainor.com">Digital by TRAINOR</a>
+        <div class="w-max 2xl m-8">
+            <a href="https://www.trainor.com">Digital by TRAINOR</a>
         </div>
     </div>
-    
+    <script src="/main.js"></script>
 </body>
 </html>
