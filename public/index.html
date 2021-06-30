@@ -8,49 +8,49 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='style.css'>
 </head>
-<body class="h-screen">
+<body class="h-screen w-full">
     <!-- Navbar -->
-    <div class="w-full h-185 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-baseline py-10 justify-items-center">
-        <div class="w-max 2xl m-4 lg:m-8 text-xl">
+    <div class="h-185 grid grid-cols-1 md:grid-cols-3 items-baseline md:py-10 justify-items-center">
+        <div class="w-max m-4 lg:m-8 text-xl">
             Visit <a class="text-green-600 transition ease-linear hover:text-green-900" href="https://www.adirondackbank.com">adirondackbank.com</a>   
         </div>
         <div>
             <img src="\src\adir_oneline_grn-white_banklocal.png">
         </div>
         <div class="w-max m-8 text-green-600 text-xl">
-            <a class="pr-3 transition ease-linear hover:text-green-900" href="/promotions">Promotions & Offers</a>
-            <a class="pr-3 transition ease-linear hover:text-green-900" href="/news">Latest News</a>
-            <a class="pr-3 transition ease-linear hover:text-green-900" href="/locations">Locations</a>
+            <a class="p-3 transition ease-linear hover:text-green-900" href="/promotions">Promotions & Offers</a>
+            <a class="p-3 transition ease-linear hover:text-green-900" href="/news">Latest News</a>
+            <a class="p-3 transition ease-linear hover:text-green-900" href="/locations">Locations</a>
         </div>
     </div>
 
     <!-- Sliding Info Panel -->
-    <div class="w-full h-924 relative">
-        <div class="slide absolute inset-0 flex items-center bg-gradient-to-l from-black via-blue-900 to-black transition-all ease-in-out duration-1000 transform translate-x-0">
-            <button onclick="previousSlide()"><img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
-            <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
-            <div class="">
-                <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
-                <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
+    <div class="w-full relative overflow-hidden">
+        <div class="w-full slide absolute p-10 flex items-center bg-gradient-to-l from-black via-blue-900 to-black transition-all ease-in-out duration-1000 transform translate-x-0">
+            <button onclick="previousSlide()"><img class="transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
+            <img class="p-20 display hidden xl:flex"src="\src\computers.png">
+            <div class="flex-auto">
+                <img class="pt-4 mx-auto"src="\src\cyberTips.png">
+                <a href="#"><img class="m-4 mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
             </div>
-            <button onclick="nextSlide()"><img class="fixed right-0 object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png"></button>
+            <button onclick="nextSlide()"><img class=""src="\src\noun_Right Arrow_1918043.png"></button>
         </div>
 
-        <div class="slide inset-0 flex items-center bg-gradient-to-l from-black via-green-900 to-black transition-all ease-in-out duration-1000 transform translate-x-full">
-            <button onclick="previousSlide()"><img class="object-scale-down p-20 transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
-            <img class="object-scale-down p-20 mx-auto"src="\src\computers.png">
+        <div class="w-full slide overflow-hidden p-10 flex items-center bg-gradient-to-l from-black via-green-900 to-black transition-all ease-in-out duration-1000 transform translate-x-full">
+            <button onclick="previousSlide()"><img class="transform rotate-180"src="\src\noun_Right Arrow_1918043.png"></button>
+            <img class="p-20 display hidden xl:flex"src="\src\computers.png">
             <div>
-                <img class="object-scale-down p-20 mx-auto"src="\src\cyberTips.png">
-                <a href="#"><img class="mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
+                <img class="pt-4"src="\src\cyberTips.png">
+                <a href="#"><img class="m-4 mx-auto transition ease-linear hover:shadow-2xl"src="\src\learnMore.png"></a>
             </div>
-            <button onclick="nextSlide()"><img class="object-scale-down p-20"src="\src\noun_Right Arrow_1918043.png"></button>
+            <button onclick="nextSlide()"><img class=""src="\src\noun_Right Arrow_1918043.png"></button>
         </div>
      </div>
 
     
 
     <!-- Clickable cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-20">
+    <div class="grid grid-cols- md:grid-cols-2 lg:grid-cols-3 gap-10 m-20">
         <div>
             <a href="/getStarted"><img class="mx-auto z-10 filter drop-shadow-xl transition ease-linear hover:bg-gray-400 hover:shadow-xl relative" src="\src\placeholderCard.png"></a>
         </div>
@@ -65,7 +65,7 @@
     
     <!-- 'Top News' Horizontal Bar -->
     <a  href="#"><div class="bg-green-700 w-8/12 h-24 rounded-r-full flex items-center gap-10 pr-10 justify-end">
-        <p class="text-3xl text-white pl-10 md:text-4xl md:pl-0">Top News & Information</p>
+        <p class="text-2xl text-white pl-10 md:text-4xl md:pl-0">Top News & Information</p>
         <img src="\src\arrow.png">
     </div></a>
 
